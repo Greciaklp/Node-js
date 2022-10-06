@@ -1,0 +1,41 @@
+### Get Productos
+GET http://localhost:3030/productos
+
+### Get Productos por Id 
+GET http://localhost:3030/productos/633cd401c7873c07cb8929
+
+### agregar productos
+POST http://localhost:3030/productos/
+Content-Type: application/json
+
+{
+"titulo": "Vino Tinto El Enemigo",
+"precio": 3500,
+"descripcion": "Tinto elaborado en la Provincia de Mendoza, Crianza de 14 meses en barricas de roble frances",
+"categoria": "Vinos",
+"imagen": "aun no tengo una imagen"
+}
+
+### Eliminar producto
+DELETE http://localhost:3030/productos/633cd401c7873c07cb89297a
+
+### modificar producto por id
+
+PUT  http://localhost:3030/productos/633cd401c7873c07cb89297a
+Content-Type: application/json
+
+{
+"titulo": "Vino Tinto El Enemigo",
+"precio": 2000,
+"descripcion": "Tinto elaborado en la Provincia de Mendoza, Crianza de 14 meses en barricas de roble frances",
+"categoria": "Vinos",
+"imagen": "aun no tengo una imagen"
+}
+
+
+
+
+
+
+
+
