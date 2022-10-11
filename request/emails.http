@@ -1,0 +1,25 @@
+### agregar email
+POST http://localhost:3030/emails/
+Content-Type: application/json
+
+{
+    "email": "usuario5@gmail.com"
+}
+
+### buscar emails
+GET http://localhost:3030/emails/
+
+### buscar email by Id
+GET http://localhost:3030/emails/6344b36f8de35165831f9b43
+
+### Eliminar mail
+DELETE http://localhost:3030/emails/6344b4ee1fa0ab01a7d9c29e
+
+### modificar email por id
+
+PUT  http://localhost:3030/emails/6344b36f8de35165831f9b43
+Content-Type: application/json
+
+{
+    "email": "usuario20@gmail.com"
+}

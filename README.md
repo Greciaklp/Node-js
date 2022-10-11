@@ -1,8 +1,15 @@
-# Proyecto final
+# Proyecto final ADA Introducción a Nodejs
 
-## Introducción a Nodejs-api productos 
+### API Productos 
 
+### Coffee
 ![winecoffee](./winecoffee.jpg)
+
+### Vino
+![wine](./wine.webp)
+
+
+
 [google](https://www.google.com)
 
 
@@ -10,18 +17,13 @@
 
 ### Tecnologías
 
-Esto es un texto **negrita**
-*italic*
-
 * node
 * express
 * mongo db
 
-### link a mi servidor
-?????
 
 ``` Javascript
-let prueba = 'solo estoy probando como funciona este codigo'
+npm run dev
 ```
 
 ### Como iniciar el proyecto
@@ -30,3 +32,15 @@ let prueba = 'solo estoy probando como funciona este codigo'
 2. npm install
 3. .env para variables de entorno (opcional)
 4. npm run start 
+
+### Mi página 
+http://localhost:3030/mypage/
+
+
+### Rutas para probar la API
+
+
+* ver carpeta request (emails.http y productos.http)
+
+
+

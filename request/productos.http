@@ -2,36 +2,41 @@
 GET http://localhost:3030/productos
 
 ### Get Productos por Id 
-GET http://localhost:3030/productos/633cd401c7873c07cb8929
+GET http://localhost:3030/productos/63431763dd92918d1f29
 
 ### agregar productos
 POST http://localhost:3030/productos/
 Content-Type: application/json
 
 {
-"titulo": "Vino Tinto El Enemigo",
-"precio": 3500,
-"descripcion": "Tinto elaborado en la Provincia de Mendoza, Crianza de 14 meses en barricas de roble frances",
+"titulo": "Vino los intocables black cabernet",
+"precio": 1315,
+"descripcion": "Es un vino que es boca presenta sabores a chocolate y pimientos asados",
 "categoria": "Vinos",
-"imagen": "aun no tengo una imagen"
+"imagen": "https://revistaelconocedor.com/wp-content/uploads/2021/09/Intocables-1.jpg"
 }
 
 ### Eliminar producto
-DELETE http://localhost:3030/productos/633cd401c7873c07cb89297a
+DELETE http://localhost:3030/productos/63433092f0b7e50b6b4ae13a
 
 ### modificar producto por id
 
-PUT  http://localhost:3030/productos/633cd401c7873c07cb89297a
+PUT  http://localhost:3030/productos/63431ff3dd92918d1f29a0ae
 Content-Type: application/json
 
 {
-"titulo": "Vino Tinto El Enemigo",
-"precio": 2000,
-"descripcion": "Tinto elaborado en la Provincia de Mendoza, Crianza de 14 meses en barricas de roble frances",
+"titulo": "Vino los intocables black cabernet, Finca las Moras",
+"precio": 1315,
+"descripcion": "Es un vino que es boca presenta sabores a chocolate y pimientos asados",
 "categoria": "Vinos",
-"imagen": "aun no tengo una imagen"
+"imagen": "https://revistaelconocedor.com/wp-content/uploads/2021/09/Intocables-1.jpg"
 }
 
+### encontrar producto por nombre
+GET http://localhost:3030/productos/titulo?n=Vino
+
+### encontrar producto por nombre
+GET http://localhost:3030/productos/titulo?n=cafe
 
 
 

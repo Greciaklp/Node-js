@@ -7,8 +7,10 @@ import {
   encontrarProducto,
   borrarProducto,
   modificarProducto,
+  encontrarProductoPorNombre,
 } from "../controllers/productos.controller.js";
 
+router.get("/titulo", encontrarProductoPorNombre);
 router.post("/", agregarProducto);
 router.get("/", buscarProductos);
 router.get("/:id", encontrarProducto);

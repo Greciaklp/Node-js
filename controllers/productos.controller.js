@@ -21,6 +21,7 @@ try {
 }
 };
 
+
 export async function encontrarProducto(req, res) {
 try {
   console.log(req.params.id);
@@ -32,10 +33,31 @@ try {
 }
 };
 
+export async function encontrarProductoPorNombre(req, res) {
+  try {
+  console.log(req.query.n);
+  const producto = await Producto.find({
+    titulo: { $regex: new RegExp(req.query.n, "ig") },
+  });
+  if (producto === null) {
+   throw new Error("El producto no existe"); 
+  }
+  res.status(200).json(producto);
+} catch (error) {
+  console.log(error.message);
+  res.status(500).json({ mesaage: "Producto no encontrado" });
+}
+};
+
 export async function borrarProducto(req, res) {
-try {
-  console.log(req.params.id);
+  try {
+  console.log("id" + req.params.id);
   const producto = await Producto.findByIdAndDelete(req.params.id);
+    if (producto === null) {
+    throw new Error('El producto no existe')
+    console.log(producto);
+  }
+  
   res.status(200).json({ mesaage: "producto eliminado" });
 } catch (error) {
   console.log(error.message);
